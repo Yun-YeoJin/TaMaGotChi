@@ -14,6 +14,19 @@
 		AEF6853B288A7BFE00BABA4D /* TaMaGotChi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AEF68539288A7BFE00BABA4D /* TaMaGotChi.xcdatamodeld */; };
 		AEF6853D288A7C0000BABA4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEF6853C288A7C0000BABA4D /* Assets.xcassets */; };
 		AEF68540288A7C0000BABA4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEF6853E288A7C0000BABA4D /* LaunchScreen.storyboard */; };
+		AEF6854D288AC92000BABA4D /* SelectCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF6854B288AC92000BABA4D /* SelectCollectionViewController.swift */; };
+		AEF68551288AC94500BABA4D /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF6854F288AC94500BABA4D /* SettingTableViewController.swift */; };
+		AEF68555288AC95900BABA4D /* ChangeNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF68553288AC95900BABA4D /* ChangeNameViewController.swift */; };
+		AEF68559288AC97600BABA4D /* DetailPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF68557288AC97600BABA4D /* DetailPopUpViewController.swift */; };
+		AEF6855C288AC9D800BABA4D /* SelectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF6855B288AC9D800BABA4D /* SelectCollectionViewCell.swift */; };
+		AEF6855E288ACA3100BABA4D /* Select.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEF6855D288ACA3100BABA4D /* Select.storyboard */; };
+		AEF68560288ACA3F00BABA4D /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEF6855F288ACA3F00BABA4D /* Setting.storyboard */; };
+		AEF68562288ACA5500BABA4D /* ChangeName.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEF68561288ACA5500BABA4D /* ChangeName.storyboard */; };
+		AEF68564288ACA6400BABA4D /* DetailPopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEF68563288ACA6400BABA4D /* DetailPopUp.storyboard */; };
+		AEF68566288ACABE00BABA4D /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF68565288ACABE00BABA4D /* SettingTableViewCell.swift */; };
+		AEF68568288ACEB700BABA4D /* SelectStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF68567288ACEB600BABA4D /* SelectStruct.swift */; };
+		AEF6856A288ACEF300BABA4D /* SelectInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF68569288ACEF300BABA4D /* SelectInfo.swift */; };
+		AEF6856D288ADA6A00BABA4D /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = AEF6856C288ADA6A00BABA4D /* Toast */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +39,18 @@
 		AEF6853C288A7C0000BABA4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEF6853F288A7C0000BABA4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEF68541288A7C0000BABA4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEF6854B288AC92000BABA4D /* SelectCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollectionViewController.swift; sourceTree = "<group>"; };
+		AEF6854F288AC94500BABA4D /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		AEF68553288AC95900BABA4D /* ChangeNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNameViewController.swift; sourceTree = "<group>"; };
+		AEF68557288AC97600BABA4D /* DetailPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPopUpViewController.swift; sourceTree = "<group>"; };
+		AEF6855B288AC9D800BABA4D /* SelectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollectionViewCell.swift; sourceTree = "<group>"; };
+		AEF6855D288ACA3100BABA4D /* Select.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Select.storyboard; sourceTree = "<group>"; };
+		AEF6855F288ACA3F00BABA4D /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		AEF68561288ACA5500BABA4D /* ChangeName.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangeName.storyboard; sourceTree = "<group>"; };
+		AEF68563288ACA6400BABA4D /* DetailPopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailPopUp.storyboard; sourceTree = "<group>"; };
+		AEF68565288ACABE00BABA4D /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		AEF68567288ACEB600BABA4D /* SelectStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectStruct.swift; sourceTree = "<group>"; };
+		AEF68569288ACEF300BABA4D /* SelectInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEF6856D288ADA6A00BABA4D /* Toast in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +84,10 @@
 		AEF6852F288A7BFE00BABA4D /* TaMaGotChi */ = {
 			isa = PBXGroup;
 			children = (
+				AEF6854A288AC8C400BABA4D /* DetailPopUp */,
+				AEF68549288AC8B700BABA4D /* ChangeName */,
+				AEF68548288AC8AB00BABA4D /* Setting */,
+				AEF68547288AC85F00BABA4D /* Select */,
 				AEF68530288A7BFE00BABA4D /* AppDelegate.swift */,
 				AEF68532288A7BFE00BABA4D /* SceneDelegate.swift */,
 				AEF68534288A7BFE00BABA4D /* ViewController.swift */,
@@ -68,6 +98,46 @@
 				AEF68539288A7BFE00BABA4D /* TaMaGotChi.xcdatamodeld */,
 			);
 			path = TaMaGotChi;
+			sourceTree = "<group>";
+		};
+		AEF68547288AC85F00BABA4D /* Select */ = {
+			isa = PBXGroup;
+			children = (
+				AEF6854B288AC92000BABA4D /* SelectCollectionViewController.swift */,
+				AEF6855B288AC9D800BABA4D /* SelectCollectionViewCell.swift */,
+				AEF68567288ACEB600BABA4D /* SelectStruct.swift */,
+				AEF68569288ACEF300BABA4D /* SelectInfo.swift */,
+				AEF6855D288ACA3100BABA4D /* Select.storyboard */,
+			);
+			path = Select;
+			sourceTree = "<group>";
+		};
+		AEF68548288AC8AB00BABA4D /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				AEF6854F288AC94500BABA4D /* SettingTableViewController.swift */,
+				AEF68565288ACABE00BABA4D /* SettingTableViewCell.swift */,
+				AEF6855F288ACA3F00BABA4D /* Setting.storyboard */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		AEF68549288AC8B700BABA4D /* ChangeName */ = {
+			isa = PBXGroup;
+			children = (
+				AEF68553288AC95900BABA4D /* ChangeNameViewController.swift */,
+				AEF68561288ACA5500BABA4D /* ChangeName.storyboard */,
+			);
+			path = ChangeName;
+			sourceTree = "<group>";
+		};
+		AEF6854A288AC8C400BABA4D /* DetailPopUp */ = {
+			isa = PBXGroup;
+			children = (
+				AEF68557288AC97600BABA4D /* DetailPopUpViewController.swift */,
+				AEF68563288ACA6400BABA4D /* DetailPopUp.storyboard */,
+			);
+			path = DetailPopUp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +156,9 @@
 			dependencies = (
 			);
 			name = TaMaGotChi;
+			packageProductDependencies = (
+				AEF6856C288ADA6A00BABA4D /* Toast */,
+			);
 			productName = TaMaGotChi;
 			productReference = AEF6852D288A7BFE00BABA4D /* TaMaGotChi.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +187,9 @@
 				Base,
 			);
 			mainGroup = AEF68524288A7BFE00BABA4D;
+			packageReferences = (
+				AEF6856B288ADA6A00BABA4D /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+			);
 			productRefGroup = AEF6852E288A7BFE00BABA4D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -129,6 +205,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEF68540288A7C0000BABA4D /* LaunchScreen.storyboard in Resources */,
+				AEF6855E288ACA3100BABA4D /* Select.storyboard in Resources */,
+				AEF68564288ACA6400BABA4D /* DetailPopUp.storyboard in Resources */,
+				AEF68562288ACA5500BABA4D /* ChangeName.storyboard in Resources */,
+				AEF68560288ACA3F00BABA4D /* Setting.storyboard in Resources */,
 				AEF6853D288A7C0000BABA4D /* Assets.xcassets in Resources */,
 				AEF68538288A7BFE00BABA4D /* Main.storyboard in Resources */,
 			);
@@ -141,10 +221,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEF68568288ACEB700BABA4D /* SelectStruct.swift in Sources */,
+				AEF68559288AC97600BABA4D /* DetailPopUpViewController.swift in Sources */,
+				AEF68551288AC94500BABA4D /* SettingTableViewController.swift in Sources */,
 				AEF6853B288A7BFE00BABA4D /* TaMaGotChi.xcdatamodeld in Sources */,
+				AEF6854D288AC92000BABA4D /* SelectCollectionViewController.swift in Sources */,
 				AEF68535288A7BFE00BABA4D /* ViewController.swift in Sources */,
+				AEF6855C288AC9D800BABA4D /* SelectCollectionViewCell.swift in Sources */,
+				AEF6856A288ACEF300BABA4D /* SelectInfo.swift in Sources */,
+				AEF68566288ACABE00BABA4D /* SettingTableViewCell.swift in Sources */,
 				AEF68531288A7BFE00BABA4D /* AppDelegate.swift in Sources */,
 				AEF68533288A7BFE00BABA4D /* SceneDelegate.swift in Sources */,
+				AEF68555288AC95900BABA4D /* ChangeNameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +454,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AEF6856B288ADA6A00BABA4D /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AEF6856C288ADA6A00BABA4D /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AEF6856B288ADA6A00BABA4D /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		AEF68539288A7BFE00BABA4D /* TaMaGotChi.xcdatamodeld */ = {

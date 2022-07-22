@@ -1,13 +1,16 @@
 
+
 import UIKit
 
-class ViewController: UIViewController {
+class DetailPopUpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    
     }
 
 
-}
+   
 
+}

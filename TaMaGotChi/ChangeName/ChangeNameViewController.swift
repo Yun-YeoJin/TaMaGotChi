@@ -1,7 +1,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ChangeNameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -9,5 +9,6 @@ class ViewController: UIViewController {
     }
 
 
-}
+ 
 
+}

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="brh-V3-92B">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--다마고치 선택하기-->
+        <scene sceneID="6DO-Al-NwT">
+            <objects>
+                <collectionViewController storyboardIdentifier="SelectCollectionViewController" id="brK-GY-EkO" customClass="SelectCollectionViewController" customModule="TaMaGotChi" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Yms-Pq-Tng">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="prv-RE-uJQ">
+                            <size key="itemSize" width="143" height="147"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="SelectCollectionViewCell" reuseIdentifier="SelectCollectionViewCell" id="gBd-wT-tSA" customClass="SelectCollectionViewCell" customModule="TaMaGotChi" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="143" height="147"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Bmh-Do-9aO">
+                                    <rect key="frame" x="0.0" y="0.0" width="143" height="147"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WXS-I1-1xq">
+                                            <rect key="frame" x="10" y="0.0" width="123" height="103"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="WXS-I1-1xq" secondAttribute="height" id="dPk-Cr-Hxh"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TaMaGotChi Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dq6-oH-dmQ">
+                                            <rect key="frame" x="10" y="113" width="123" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="dq6-oH-dmQ" firstAttribute="top" secondItem="WXS-I1-1xq" secondAttribute="bottom" constant="10" id="4v9-qA-W3L"/>
+                                        <constraint firstItem="WXS-I1-1xq" firstAttribute="leading" secondItem="Bmh-Do-9aO" secondAttribute="leading" constant="10" id="KGO-0x-S3f"/>
+                                        <constraint firstAttribute="bottom" secondItem="dq6-oH-dmQ" secondAttribute="bottom" constant="10" id="Q92-sz-f5k"/>
+                                        <constraint firstAttribute="trailing" secondItem="WXS-I1-1xq" secondAttribute="trailing" constant="10" id="VnI-Wl-PYH"/>
+                                        <constraint firstItem="dq6-oH-dmQ" firstAttribute="leading" secondItem="Bmh-Do-9aO" secondAttribute="leading" constant="10" id="aEb-ph-33T"/>
+                                        <constraint firstItem="WXS-I1-1xq" firstAttribute="top" secondItem="Bmh-Do-9aO" secondAttribute="top" id="eFf-Ma-bdV"/>
+                                        <constraint firstAttribute="bottom" secondItem="WXS-I1-1xq" secondAttribute="bottom" constant="44" id="gQK-gA-t5r"/>
+                                        <constraint firstAttribute="trailing" secondItem="dq6-oH-dmQ" secondAttribute="trailing" constant="10" id="pLn-47-4SA"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="143" height="147"/>
+                                <connections>
+                                    <outlet property="TaMaGotChiImageView" destination="WXS-I1-1xq" id="KWo-mR-8eq"/>
+                                    <outlet property="TaMaGotChiNameLabel" destination="dq6-oH-dmQ" id="jf8-Fq-oIN"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="brK-GY-EkO" id="Pkb-so-Ihz"/>
+                            <outlet property="delegate" destination="brK-GY-EkO" id="apl-Do-mxv"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="다마고치 선택하기" id="ruT-gg-fS7"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eU9-uR-yqo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1752.1739130434785" y="113.83928571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="d6a-bm-Cgp">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ea-Gb-i0T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="brh-V3-92B" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="E01-ZO-hU0">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <navigationBarAppearance key="standardAppearance"/>
+                        <navigationBarAppearance key="scrollEdgeAppearance"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="brK-GY-EkO" kind="relationship" relationship="rootViewController" id="QGq-Cb-yxU"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="842.02898550724649" y="113.83928571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
