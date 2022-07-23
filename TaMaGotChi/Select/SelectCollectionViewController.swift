@@ -44,10 +44,17 @@ class SelectCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let sb = UIStoryboard(name: "DetailPopUp", bundle: nil)
+        
+        let popupVC = sb.instantiateViewController(withIdentifier: "DetailPopUpViewController") as! DetailPopUpViewController
+        
+        popupVC.modalPresentationStyle = .overCurrentContext
+        present(popupVC, animated: true, completion: nil)
         
         if indexPath.item > 2 {
             self.view.makeToast("열심히 준비중이에요 >.<", duration: 2, position: .bottom, title: "개발하는 윤기사", completion: nil)
         }
     
 }
+    
 }

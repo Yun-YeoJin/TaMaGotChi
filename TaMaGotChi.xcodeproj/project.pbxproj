@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AEC5A89D288C483500F080B3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC5A89C288C483500F080B3 /* MainViewController.swift */; };
 		AEF68531288A7BFE00BABA4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF68530288A7BFE00BABA4D /* AppDelegate.swift */; };
 		AEF68533288A7BFE00BABA4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF68532288A7BFE00BABA4D /* SceneDelegate.swift */; };
 		AEF68535288A7BFE00BABA4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF68534288A7BFE00BABA4D /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AEC5A89C288C483500F080B3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AEF6852D288A7BFE00BABA4D /* TaMaGotChi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaMaGotChi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF68530288A7BFE00BABA4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEF68532288A7BFE00BABA4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				AEF68530288A7BFE00BABA4D /* AppDelegate.swift */,
 				AEF68532288A7BFE00BABA4D /* SceneDelegate.swift */,
 				AEF68534288A7BFE00BABA4D /* ViewController.swift */,
+				AEC5A89C288C483500F080B3 /* MainViewController.swift */,
 				AEF68536288A7BFE00BABA4D /* Main.storyboard */,
 				AEF6853C288A7C0000BABA4D /* Assets.xcassets */,
 				AEF6853E288A7C0000BABA4D /* LaunchScreen.storyboard */,
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEF68568288ACEB700BABA4D /* SelectStruct.swift in Sources */,
+				AEC5A89D288C483500F080B3 /* MainViewController.swift in Sources */,
 				AEF68559288AC97600BABA4D /* DetailPopUpViewController.swift in Sources */,
 				AEF68551288AC94500BABA4D /* SettingTableViewController.swift in Sources */,
 				AEF6853B288A7BFE00BABA4D /* TaMaGotChi.xcdatamodeld in Sources */,
