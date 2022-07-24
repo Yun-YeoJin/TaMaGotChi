@@ -6,11 +6,14 @@ import Toast
 
 class SelectCollectionViewController: UICollectionViewController {
     
-    var TaMaGotChiList = SelectInfo()
+    var selectInfo = SelectInfo()
+    
+    var taMaGotChiDetail = TaMaGotChiInfo()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //컬렉션뷰 위치 설정 및 3*N 설정
         let layout = UICollectionViewFlowLayout()
         let spacing: CGFloat = 8
         let width = UIScreen.main.bounds.width - (spacing * 4)
@@ -26,15 +29,15 @@ class SelectCollectionViewController: UICollectionViewController {
         collectionView.collectionViewLayout = layout
     
 }
-    
+    // 셀의 갯수
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return TaMaGotChiList.TaMaGotChi.count
+        return selectInfo.TaMaGotChi.count
     }
-    
+    // 셀의 내용
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SelectCollectionViewCell", for: indexPath) as! SelectCollectionViewCell
         
-        let data = TaMaGotChiList.TaMaGotChi[indexPath.item]
+        let data = selectInfo.TaMaGotChi[indexPath.item]
         cell.CellDesign(data: data)
         cell.TaMaGotChiImageView.image = UIImage(named: data.image)
         
@@ -42,19 +45,26 @@ class SelectCollectionViewController: UICollectionViewController {
         
         return cell
     }
-    
+    // 셀 선택시
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let sb = UIStoryboard(name: "DetailPopUp", bundle: nil)
         
-        let popupVC = sb.instantiateViewController(withIdentifier: "DetailPopUpViewController") as! DetailPopUpViewController
-        
-        popupVC.modalPresentationStyle = .overCurrentContext
-        present(popupVC, animated: true, completion: nil)
-        
-        if indexPath.item > 2 {
+        if indexPath.item > taMaGotChiDetail.taMaGotChiDetailArray.count { // 준비중인 셀 클릭 시
             self.view.makeToast("열심히 준비중이에요 >.<", duration: 2, position: .bottom, title: "개발하는 윤기사", completion: nil)
+            
+        } else { // 나머지 셀 클릭시
+            
+            let sb = UIStoryboard(name: "DetailPopUp", bundle: nil)
+            
+            let popupVC = sb.instantiateViewController(withIdentifier: "DetailPopUpViewController") as! DetailPopUpViewController
+            
+            popupVC.onTaMaGotChiData = taMaGotChiDetail.taMaGotChiDetailArray[indexPath.item] //데이터 넘김
+            
+            popupVC.modalPresentationStyle = .overCurrentContext
+            present(popupVC, animated: true, completion: nil)
+            
+            
         }
-    
-}
+        
+    }
     
 }

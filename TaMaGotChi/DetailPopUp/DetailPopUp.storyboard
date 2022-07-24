@@ -61,7 +61,10 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLT-iR-dph">
                                                 <rect key="frame" x="167" y="0.0" width="167" height="44"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="변경하기"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="시작하기"/>
+                                                <connections>
+                                                    <action selector="StartButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ipY-N9-f97"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>

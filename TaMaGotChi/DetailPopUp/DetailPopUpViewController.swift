@@ -4,9 +4,8 @@ import UIKit
 
 class DetailPopUpViewController: UIViewController {
 
-    var TaMaGotChiNameArray = ["따끔따끔 다마고치": "헤헷 쪼아용", "방실방실 다마고치": "더더 쪼아용", "반짝반짝 다마고치": "무자하게 쪼아용"]
-  
-    
+
+    var onTaMaGotChiData: TaMaGotChiDetail? //다마고치 디테일 구조체 불러오기
     
     var BackGroundColor = UIColor(red: 245/255, green: 252/255, blue: 252/255, alpha: 1)
     var tintColor = UIColor(red: 77/255, green: 106/255, blue: 120/255, alpha: 1)
@@ -33,8 +32,14 @@ class DetailPopUpViewController: UIViewController {
         popupBackGroundView.backgroundColor = BackGroundColor
         popupBackGroundView.layer.cornerRadius = 10
      
+        TaMaGotChiName.text = onTaMaGotChiData?.name
+        TamaGotChiDesrciptionLabel.text = onTaMaGotChiData?.description
+        TaMaGotChiImageView.image = UIImage(named: onTaMaGotChiData!.image)
+        
+        
+        
     }
-
+    //레이블 디자인
     func LabelDesign() {
 
         TaMaGotChiName.textColor = tintColor
@@ -50,7 +55,7 @@ class DetailPopUpViewController: UIViewController {
         TamaGotChiDesrciptionLabel.textAlignment = .center
         
     }
-    
+    //버튼 디자인
     func ButtonDesign() {
         changeButton.tintColor = tintColor
         changeButton.backgroundColor = BackGroundColor
@@ -67,18 +72,32 @@ class DetailPopUpViewController: UIViewController {
         
 
         }
-    
+    // 밑줄 디자인
     func underLineDesign() {
         underLineView.backgroundColor = tintColor
     }
-        
+    // 취소 버튼 클릭 시 팝업 창 내려가기
     @IBAction func cancelButtonClicked(_ sender: UIButton) {
         self.dismiss(animated: true)
+    }
+    
+    // 시작 버튼 클릭 시
+    @IBAction func StartButtonClicked(_ sender: UIButton) {
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+        vc.type = onTaMaGotChiData?.type ?? 0
+        
+        let nav = UINavigationController(rootViewController: vc)
+
+        nav.modalPresentationStyle = .fullScreen
+    
+        self.present(nav, animated: true, completion: nil)
+        
+        
+        
     }
 }
 
 
 
-//배경색상 : UIColor(red: 245/255, green: 252/255, blue: 252/255, alpha: 1)
-
-//폰트, 테두리 색상 : UIColor(red: 77/255, green: 106/255, blue: 120/255, alpha: 1)
