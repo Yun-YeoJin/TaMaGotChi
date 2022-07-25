@@ -1,6 +1,7 @@
 
 import UIKit
 
+
 class MainViewController: UIViewController {
     
     var type = 0

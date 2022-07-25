@@ -12,6 +12,7 @@
 		AEC5A8A1288D42B900F080B3 /* TaMaGotChiStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC5A8A0288D42B900F080B3 /* TaMaGotChiStruct.swift */; };
 		AEC5A8A3288D42F700F080B3 /* TaMaGotChiInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC5A8A2288D42F700F080B3 /* TaMaGotChiInfo.swift */; };
 		AEC5A8A5288D6A1900F080B3 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC5A8A4288D6A1900F080B3 /* UIView+Extension.swift */; };
+		AEC5A8B1288E7D4F00F080B3 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AEC5A8B0288E7D4F00F080B3 /* IQKeyboardManagerSwift */; };
 		AEF68531288A7BFE00BABA4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF68530288A7BFE00BABA4D /* AppDelegate.swift */; };
 		AEF68533288A7BFE00BABA4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF68532288A7BFE00BABA4D /* SceneDelegate.swift */; };
 		AEF68535288A7BFE00BABA4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF68534288A7BFE00BABA4D /* ViewController.swift */; };
@@ -69,6 +70,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEF6856D288ADA6A00BABA4D /* Toast in Frameworks */,
+				AEC5A8B1288E7D4F00F080B3 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +183,7 @@
 			name = TaMaGotChi;
 			packageProductDependencies = (
 				AEF6856C288ADA6A00BABA4D /* Toast */,
+				AEC5A8B0288E7D4F00F080B3 /* IQKeyboardManagerSwift */,
 			);
 			productName = TaMaGotChi;
 			productReference = AEF6852D288A7BFE00BABA4D /* TaMaGotChi.app */;
@@ -212,6 +215,7 @@
 			mainGroup = AEF68524288A7BFE00BABA4D;
 			packageReferences = (
 				AEF6856B288ADA6A00BABA4D /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+				AEC5A8AF288E7D4F00F080B3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = AEF6852E288A7BFE00BABA4D /* Products */;
 			projectDirPath = "";
@@ -486,6 +490,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AEC5A8AF288E7D4F00F080B3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = exactVersion;
+				version = 6.5.0;
+			};
+		};
 		AEF6856B288ADA6A00BABA4D /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
@@ -497,6 +509,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AEC5A8B0288E7D4F00F080B3 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AEC5A8AF288E7D4F00F080B3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
 		AEF6856C288ADA6A00BABA4D /* Toast */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AEF6856B288ADA6A00BABA4D /* XCRemoteSwiftPackageReference "Toast-Swift" */;
