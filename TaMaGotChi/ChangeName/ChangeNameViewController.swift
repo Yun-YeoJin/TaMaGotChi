@@ -2,17 +2,14 @@
 import UIKit
 
 class ChangeNameViewController: UIViewController {
-
     
-   
-                                            
     @IBOutlet weak var changeNameTextField: UITextField!
     
     @IBOutlet weak var textfieldUnderLine: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         changeNameTextFieldDesign()
         underLineDesign()
         
@@ -20,14 +17,15 @@ class ChangeNameViewController: UIViewController {
         navigationItem.rightBarButtonItem = rightButtonToSave
         
         navigationItemDesign()
-
-   
+        
+        
         view.backgroundColor = UIColor(red: 245/255, green: 252/255, blue: 252/255, alpha: 1)
         
     }
     // 저장하기
     @objc func saveButtonClicked() {
         UserDefaults.standard.set(changeNameTextField.text, forKey: "userName")
+        self.view.makeToast("이름 변경 완료 >3<", duration: 1, position: .center, completion: nil)
     }
     // 텍스트 필드 디자인
     func changeNameTextFieldDesign() {
@@ -47,5 +45,5 @@ class ChangeNameViewController: UIViewController {
         navigationItem.titleView?.tintColor = UIColor(red: 77/255, green: 106/255, blue: 120/255, alpha: 1)
     }
     
-
+    
 }

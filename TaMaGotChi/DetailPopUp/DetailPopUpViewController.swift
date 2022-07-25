@@ -3,8 +3,8 @@
 import UIKit
 
 class DetailPopUpViewController: UIViewController {
-
-
+    
+    
     var onTaMaGotChiData: TaMaGotChiDetail? //다마고치 디테일 구조체 불러오기
     
     var BackGroundColor = UIColor(red: 245/255, green: 252/255, blue: 252/255, alpha: 1)
@@ -17,7 +17,7 @@ class DetailPopUpViewController: UIViewController {
     @IBOutlet weak var TamaGotChiDesrciptionLabel: UILabel!
     @IBOutlet weak var underLineView: UIView!
     
-  
+    
     @IBOutlet weak var cancelButton: UIButton!
     
     @IBOutlet weak var changeButton: UIButton!
@@ -31,7 +31,7 @@ class DetailPopUpViewController: UIViewController {
         
         popupBackGroundView.backgroundColor = BackGroundColor
         popupBackGroundView.layer.cornerRadius = 10
-     
+        
         TaMaGotChiName.text = onTaMaGotChiData?.name
         TamaGotChiDesrciptionLabel.text = onTaMaGotChiData?.description
         TaMaGotChiImageView.image = UIImage(named: onTaMaGotChiData!.image)
@@ -41,17 +41,16 @@ class DetailPopUpViewController: UIViewController {
     }
     //레이블 디자인
     func LabelDesign() {
-
+        
         TaMaGotChiName.textColor = tintColor
         TaMaGotChiName.font = .boldSystemFont(ofSize: 14)
         TaMaGotChiName.textAlignment = .center
         TaMaGotChiName.layer.borderWidth = 1
         TaMaGotChiName.layer.borderColor = tintColor.cgColor
         TaMaGotChiName.layer.cornerRadius = 3
-    
+        
         
         TamaGotChiDesrciptionLabel.textColor = tintColor
-        TamaGotChiDesrciptionLabel.text = "다마고치에용"
         TamaGotChiDesrciptionLabel.textAlignment = .center
         
     }
@@ -70,8 +69,8 @@ class DetailPopUpViewController: UIViewController {
         cancelButton.layer.borderWidth = 0.5
         cancelButton.layer.borderColor = tintColor.cgColor
         
-
-        }
+        
+    }
     // 밑줄 디자인
     func underLineDesign() {
         underLineView.backgroundColor = tintColor
@@ -89,9 +88,9 @@ class DetailPopUpViewController: UIViewController {
         vc.type = onTaMaGotChiData?.type ?? 0
         
         let nav = UINavigationController(rootViewController: vc)
-
+        
         nav.modalPresentationStyle = .fullScreen
-    
+        
         self.present(nav, animated: true, completion: nil)
         
         

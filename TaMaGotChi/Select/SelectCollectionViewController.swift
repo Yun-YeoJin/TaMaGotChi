@@ -6,6 +6,8 @@ import Toast
 
 class SelectCollectionViewController: UICollectionViewController {
     
+    static var selectTitle = "선택"
+    
     var selectInfo = SelectInfo()
     
     var taMaGotChiDetail = TaMaGotChiInfo()
@@ -28,6 +30,7 @@ class SelectCollectionViewController: UICollectionViewController {
         
         collectionView.collectionViewLayout = layout
     
+        navigationItem.title = "다마고치 \(SelectCollectionViewController.selectTitle)하기"
 }
     // 셀의 갯수
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -48,7 +51,7 @@ class SelectCollectionViewController: UICollectionViewController {
     // 셀 선택시
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        if indexPath.item > taMaGotChiDetail.taMaGotChiDetailArray.count { // 준비중인 셀 클릭 시
+        if indexPath.item > taMaGotChiDetail.taMaGotChiDetailArray.count - 1 { // 준비중인 셀 클릭 시
             self.view.makeToast("열심히 준비중이에요 >.<", duration: 2, position: .bottom, title: "개발하는 윤기사", completion: nil)
             
         } else { // 나머지 셀 클릭시
@@ -57,12 +60,12 @@ class SelectCollectionViewController: UICollectionViewController {
             
             let popupVC = sb.instantiateViewController(withIdentifier: "DetailPopUpViewController") as! DetailPopUpViewController
             
+            UserDefaults.standard.set(indexPath.row, forKey: "tamagotchiName")
             popupVC.onTaMaGotChiData = taMaGotChiDetail.taMaGotChiDetailArray[indexPath.item] //데이터 넘김
             
             popupVC.modalPresentationStyle = .overCurrentContext
             present(popupVC, animated: true, completion: nil)
-            
-            
+  
         }
         
     }

@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--다마고치 선택하기-->
+        <!--Select Collection View Controller-->
         <scene sceneID="6DO-Al-NwT">
             <objects>
                 <collectionViewController storyboardIdentifier="SelectCollectionViewController" id="brK-GY-EkO" customClass="SelectCollectionViewController" customModule="TaMaGotChi" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,7 +30,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="143" height="147"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WXS-I1-1xq">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WXS-I1-1xq">
                                             <rect key="frame" x="10" y="0.0" width="123" height="103"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="WXS-I1-1xq" secondAttribute="height" id="dPk-Cr-Hxh"/>
@@ -66,7 +66,7 @@
                             <outlet property="delegate" destination="brK-GY-EkO" id="apl-Do-mxv"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="다마고치 선택하기" id="ruT-gg-fS7"/>
+                    <navigationItem key="navigationItem" id="ruT-gg-fS7"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eU9-uR-yqo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

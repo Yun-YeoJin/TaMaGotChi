@@ -78,8 +78,8 @@
 		AEC5A8A6288D6FF600F080B3 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				AEF68536288A7BFE00BABA4D /* Main.storyboard */,
 				AEC5A89C288C483500F080B3 /* MainViewController.swift */,
+				AEF68536288A7BFE00BABA4D /* Main.storyboard */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -410,6 +410,7 @@
 				DEVELOPMENT_TEAM = B2VD6SF7B9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TaMaGotChi/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "윤여진";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -440,6 +441,7 @@
 				DEVELOPMENT_TEAM = B2VD6SF7B9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TaMaGotChi/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "윤여진";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

@@ -15,16 +15,18 @@ extension UIViewController {
         
         let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
         
-                let okButton = UIAlertAction(title: "맞쥐", style: .destructive) { (_) in
-                    
-            let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
-            let sceneDelegate = windowScene?.delegate as? SceneDelegate
+        let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+        let sceneDelegate = windowScene?.delegate as? SceneDelegate
+        
+        let sb = UIStoryboard(name: "Select", bundle: nil)
 
-            let sb = UIStoryboard(name: "Select", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "SelectCollectionViewController") as! SelectCollectionViewController
 
-            let vc = sb.instantiateViewController(withIdentifier: "SelectCollectionViewController") as! SelectCollectionViewController
-
-            sceneDelegate?.window?.rootViewController = vc
+        let nav = UINavigationController(rootViewController: vc)
+        
+            let okButton = UIAlertAction(title: "맞쥐", style: .destructive) { (_) in
+                
+            sceneDelegate?.window?.rootViewController = nav
             sceneDelegate?.window?.makeKeyAndVisible()
         
              
