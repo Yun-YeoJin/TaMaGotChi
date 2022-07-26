@@ -72,12 +72,13 @@ class SettingTableViewController: UITableViewController {
             
             SelectCollectionViewController.selectTitle = "변경"
             
+            DetailPopUpViewController.startTaMaGotChi = "변경"
             let sb = UIStoryboard(name: "Select", bundle: nil)
             
             let vc = sb.instantiateViewController(withIdentifier: "SelectCollectionViewController") as! SelectCollectionViewController
             
             self.navigationController?.pushViewController(vc, animated: true)
-      
+            
             
         } else if indexPath.row == 2 { //데이터 초기화 클릭시
             

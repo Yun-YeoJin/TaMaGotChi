@@ -19,29 +19,28 @@ extension UIViewController {
         let sceneDelegate = windowScene?.delegate as? SceneDelegate
         
         let sb = UIStoryboard(name: "Select", bundle: nil)
-
+        
         let vc = sb.instantiateViewController(withIdentifier: "SelectCollectionViewController") as! SelectCollectionViewController
-
+        
         let nav = UINavigationController(rootViewController: vc)
         
-            let okButton = UIAlertAction(title: "맞쥐", style: .destructive) { (_) in
-                
+        let okButton = UIAlertAction(title: "맞쥐", style: .destructive) { (_) in
+            
             sceneDelegate?.window?.rootViewController = nav
             sceneDelegate?.window?.makeKeyAndVisible()
-        
-             
+            
         }
         let cancel = UIAlertAction(title: "아니쥐", style: .default)
-
+        
         alert.addAction(okButton)
         alert.addAction(cancel)
         
-     present(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
         
-   
-      
-      }
-    
-
- 
+        
+        
     }
+    
+    
+    
+}

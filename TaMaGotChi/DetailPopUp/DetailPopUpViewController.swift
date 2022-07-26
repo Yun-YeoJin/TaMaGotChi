@@ -4,6 +4,7 @@ import UIKit
 
 class DetailPopUpViewController: UIViewController {
     
+    static var startTaMaGotChi = "시작"
     
     var onTaMaGotChiData: TaMaGotChiDetail? //다마고치 디테일 구조체 불러오기
     
@@ -49,7 +50,6 @@ class DetailPopUpViewController: UIViewController {
         TaMaGotChiName.layer.borderColor = tintColor.cgColor
         TaMaGotChiName.layer.cornerRadius = 3
         
-        
         TamaGotChiDesrciptionLabel.textColor = tintColor
         TamaGotChiDesrciptionLabel.textAlignment = .center
         
@@ -59,7 +59,7 @@ class DetailPopUpViewController: UIViewController {
         changeButton.tintColor = tintColor
         changeButton.backgroundColor = BackGroundColor
         changeButton.clipsToBounds = true
-        changeButton.setTitle("시작하기", for: .normal)
+        changeButton.setTitle("\(DetailPopUpViewController.startTaMaGotChi)하기", for: .normal)
         changeButton.layer.borderWidth = 0.5
         changeButton.layer.borderColor = tintColor.cgColor
         cancelButton.tintColor = tintColor
@@ -68,9 +68,8 @@ class DetailPopUpViewController: UIViewController {
         cancelButton.setTitle("취소", for: .normal)
         cancelButton.layer.borderWidth = 0.5
         cancelButton.layer.borderColor = tintColor.cgColor
-        
-        
     }
+    
     // 밑줄 디자인
     func underLineDesign() {
         underLineView.backgroundColor = tintColor

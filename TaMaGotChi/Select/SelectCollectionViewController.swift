@@ -29,9 +29,9 @@ class SelectCollectionViewController: UICollectionViewController {
         navigationController?.navigationBar.backgroundColor = UIColor(red: 245/255, green: 252/255, blue: 252/255, alpha: 1)
         
         collectionView.collectionViewLayout = layout
-    
+        
         navigationItem.title = "다마고치 \(SelectCollectionViewController.selectTitle)하기"
-}
+    }
     // 셀의 갯수
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return selectInfo.TaMaGotChi.count
@@ -65,7 +65,7 @@ class SelectCollectionViewController: UICollectionViewController {
             
             popupVC.modalPresentationStyle = .overCurrentContext
             present(popupVC, animated: true, completion: nil)
-  
+            
         }
         
     }

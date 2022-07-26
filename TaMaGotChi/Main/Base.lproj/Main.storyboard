@@ -98,6 +98,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="waterTextFieldDone:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="3d3-Uk-kwT"/>
+                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="icu-wx-qid">
                                 <rect key="frame" x="88" y="737.5" width="160" height="1"/>
@@ -198,6 +201,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fUJ-Vh-siZ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="standardAppearance"/>
+                        <navigationBarAppearance key="scrollEdgeAppearance"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
