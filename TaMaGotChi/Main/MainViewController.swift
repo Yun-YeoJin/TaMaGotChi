@@ -280,6 +280,7 @@ class MainViewController: UIViewController {
                 updateRiceCount = riceCount + (Int(riceTextFieldText) ?? 0)
             }
         }
+        riceTextField.text = ""
         riceLabel.text = "밥알: \(updateRiceCount)개"
         UserDefaults.standard.set(updateRiceCount, forKey: "ricecount")
         
@@ -308,7 +309,7 @@ class MainViewController: UIViewController {
                 updateWaterCount = waterCount + (Int(waterTextFieldText) ?? 0)
             }
         }
-        
+        waterTextField.text = ""
         waterLabel.text = "물방울: \(updateWaterCount)개"
         UserDefaults.standard.set(updateWaterCount, forKey: "watercount")
         

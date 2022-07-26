@@ -63,7 +63,7 @@ class DetailPopUpViewController: UIViewController {
         changeButton.layer.borderWidth = 0.5
         changeButton.layer.borderColor = tintColor.cgColor
         cancelButton.tintColor = tintColor
-        cancelButton.backgroundColor = BackGroundColor
+        cancelButton.backgroundColor = .opaqueSeparator
         cancelButton.clipsToBounds = true
         cancelButton.setTitle("취소", for: .normal)
         cancelButton.layer.borderWidth = 0.5
