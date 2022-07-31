@@ -90,6 +90,7 @@ class SettingTableViewController: UITableViewController {
             UserDefaults.standard.removeObject(forKey: "watercount")
             UserDefaults.standard.removeObject(forKey: "levelcount")
             UserDefaults.standard.removeObject(forKey: "userName")
+            UserDefaults.standard.removeObject(forKey: "windowChange")
             
             
             

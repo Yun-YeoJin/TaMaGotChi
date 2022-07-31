@@ -60,7 +60,7 @@ class MainViewController: UIViewController {
         }
         setBubbleLabel() //말풍선 대사 설정
         setLevel()
-        setImageLevel()
+        //setImageLevel()
     }
     
     // 오른쪽 위 사람모양 버튼 클릭시
@@ -128,10 +128,8 @@ class MainViewController: UIViewController {
                                      "\(String(describing: name ?? "윤기사"))님 깃허브에 푸쉬 안하셨죠? 얼른 하셔야죠!!",
                                      "\(String(describing: name ?? "윤기사"))님 역시 코딩은 밤에 해야죠?"
         ]
-        
-        
-        
-        bubbleLabel.text = "\(bubbleLabelRandomText.randomElement()!)"
+
+        bubbleLabel.text = bubbleLabelRandomText.randomElement()
         bubbleLabel.textColor = tintColor
         bubbleLabel.font = .boldSystemFont(ofSize: 15)
         bubbleLabel.textAlignment = .center
@@ -169,95 +167,27 @@ class MainViewController: UIViewController {
         
     }
     
-    // 레벨업 관련 함수 선언
-    func setImageLevel() {
-        
-        let rice = UserDefaults.standard.integer(forKey: "ricecount")
-        let water = UserDefaults.standard.integer(forKey: "watercount")
-        let level = (rice / 5) + (water / 2)
-        let newLevel = 1
-        
-        switch level {
-        case 0..<20: TaMaGotChiImageView.image = UIImage(named: "\(type + 1)-\(newLevel)")
-        case 20..<30: TaMaGotChiImageView.image = UIImage(named: "\(type + 1)-\(newLevel + 1)")
-        case 30..<40: TaMaGotChiImageView.image = UIImage(named: "\(type + 1)-\(newLevel + 2)")
-        case 40..<50: TaMaGotChiImageView.image = UIImage(named: "\(type + 1)-\(newLevel + 3)")
-        case 50..<60: TaMaGotChiImageView.image = UIImage(named: "\(type + 1)-\(newLevel + 4)")
-        case 60..<70: TaMaGotChiImageView.image = UIImage(named: "\(type + 1)-\(newLevel + 5)")
-        case 70..<80: TaMaGotChiImageView.image = UIImage(named: "\(type + 1)-\(newLevel + 6)")
-        case 80..<90: TaMaGotChiImageView.image = UIImage(named: "\(type + 1)-\(newLevel + 7)")
-        default: TaMaGotChiImageView.image = UIImage(named: "\(type + 1)-\(newLevel + 8)")
-        }
-        
-        //        if level >= 0 && level < 10 {
-        //            TaMaGotChiImageView.image = UIImage(named: "\(type + 1)-\(newLevel)")
-        //        } else if level >= 10 && level < 20{
-        //            TaMaGotChiImageView.image = UIImage(named: "\(type + 1)-\(newLevel)")
-        //        } else if level >= 20 && level < 30{
-        //            TaMaGotChiImageView.image = UIImage(named: "\(type + 1)-\(newLevel + 1)")
-        //        } else if level >= 30 && level < 40{
-        //            TaMaGotChiImageView.image = UIImage(named: "\(type + 1)-\(newLevel + 2)")
-        //        } else if level >= 40 && level < 50{
-        //            TaMaGotChiImageView.image = UIImage(named: "\(type + 1)-\(newLevel + 3)")
-        //        } else if level >= 50 && level < 60{
-        //            TaMaGotChiImageView.image = UIImage(named: "\(type + 1)-\(newLevel + 4)")
-        //        } else if level >= 60 && level < 70{
-        //            TaMaGotChiImageView.image = UIImage(named: "\(type + 1)-\(newLevel + 5)")
-        //        } else if level >= 70 && level < 80{
-        //            TaMaGotChiImageView.image = UIImage(named: "\(type + 1)-\(newLevel + 6)")
-        //        } else if level >= 80 && level < 90{
-        //            TaMaGotChiImageView.image = UIImage(named: "\(type + 1)-\(newLevel + 7)")
-        //        } else if level >= 90 && level < 100{
-        //            TaMaGotChiImageView.image = UIImage(named: "\(type + 1)-\(newLevel + 8)")
-        //        } else {
-        //            TaMaGotChiImageView.image = UIImage(named: "\(type + 1)-\(newLevel + 8)")
-        //        }
-        //    }
-        
-    }
-    
-    // 레벨 = (밥먹기 / 5) + (물먹기 / 2) 설정
+    // 레벨업 관련 = (밥먹기 / 5) + (물먹기 / 2) 설정
     func setLevel() {
         
         let rice = UserDefaults.standard.integer(forKey: "ricecount")
         let water = UserDefaults.standard.integer(forKey: "watercount")
-        var newLevel = 0
-        let Level = (rice / 5) + (water / 2)
+        let newLevel = 1
+        let level = (rice / 5) + (water / 2)
         
-        if Level >= 0 && Level < 10 {
-            newLevel = 1
-            levelLabel.text = "LV: \(newLevel)"
-        } else if Level >= 10 && Level < 20{
-            newLevel = 1
-            levelLabel.text = "LV: \(newLevel)"
-        } else if Level >= 20 && Level < 30{
-            newLevel = 2
-            levelLabel.text = "LV: \(newLevel)"
-        } else if Level >= 30 && Level < 40{
-            newLevel = 3
-            levelLabel.text = "LV: \(newLevel)"
-        } else if Level >= 40 && Level < 50{
-            newLevel = 4
-            levelLabel.text = "LV: \(newLevel)"
-        } else if Level >= 50 && Level < 60{
-            newLevel = 5
-            levelLabel.text = "LV: \(newLevel)"
-        } else if Level >= 60 && Level < 70{
-            newLevel = 6
-            levelLabel.text = "LV: \(newLevel)"
-        } else if Level >= 70 && Level < 80{
-            newLevel = 7
-            levelLabel.text = "LV: \(newLevel)"
-        } else if Level >= 80 && Level < 90{
-            newLevel = 8
-            levelLabel.text = "LV: \(newLevel)"
-        } else if Level >= 90 && Level < 100{
-            newLevel = 9
-            levelLabel.text = "LV: \(newLevel)"
-        } else {
-            newLevel = 10
-            levelLabel.text = "LV: \(newLevel)"
-        }
+        switch level {
+        case 0..<20: TaMaGotChiImageView.image = UIImage(named: "\(type + 1)-\(newLevel)"); levelLabel.text = "LV: \(newLevel)"
+        case 20..<30: TaMaGotChiImageView.image = UIImage(named: "\(type + 1)-\(newLevel + 1)");  levelLabel.text = "LV: \(newLevel + 1)"
+        case 30..<40: TaMaGotChiImageView.image = UIImage(named: "\(type + 1)-\(newLevel + 2)");  levelLabel.text = "LV: \(newLevel + 2)"
+        case 40..<50: TaMaGotChiImageView.image = UIImage(named: "\(type + 1)-\(newLevel + 3)");  levelLabel.text = "LV: \(newLevel + 3)"
+        case 50..<60: TaMaGotChiImageView.image = UIImage(named: "\(type + 1)-\(newLevel + 4)");  levelLabel.text = "LV: \(newLevel + 4)"
+        case 60..<70: TaMaGotChiImageView.image = UIImage(named: "\(type + 1)-\(newLevel + 5)");  levelLabel.text = "LV: \(newLevel + 5)"
+        case 70..<80: TaMaGotChiImageView.image = UIImage(named: "\(type + 1)-\(newLevel + 6)");  levelLabel.text = "LV: \(newLevel + 6)"
+        case 80..<90: TaMaGotChiImageView.image = UIImage(named: "\(type + 1)-\(newLevel + 7)");  levelLabel.text = "LV: \(newLevel + 7)"
+        case 90..<100: TaMaGotChiImageView.image = UIImage(named: "\(type + 1)-\(newLevel + 8)");  levelLabel.text = "LV: \(newLevel + 8)"
+        default: TaMaGotChiImageView.image = UIImage(named: "\(type + 1)-\(newLevel + 8)");  levelLabel.text = "LV: \(newLevel + 9)"
+        
+    }
     }
     
     // 밥먹기 버튼 클릭 시
@@ -283,9 +213,8 @@ class MainViewController: UIViewController {
         riceTextField.text = ""
         riceLabel.text = "밥알: \(updateRiceCount)개"
         UserDefaults.standard.set(updateRiceCount, forKey: "ricecount")
-        
+        UserDefaults.standard.set(true, forKey: "windowChange")
         setLevel()
-        setImageLevel()
         setBubbleLabel()
     }
     
@@ -312,9 +241,8 @@ class MainViewController: UIViewController {
         waterTextField.text = ""
         waterLabel.text = "물방울: \(updateWaterCount)개"
         UserDefaults.standard.set(updateWaterCount, forKey: "watercount")
-        
+        UserDefaults.standard.set(true, forKey: "windowChange")
         setLevel()
-        setImageLevel()
         setBubbleLabel()
         
     }
